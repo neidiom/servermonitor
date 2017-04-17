@@ -2,6 +2,7 @@
 Collection of ruby server monitoring scripts
 
 # Howto use
-Execute binary commands
 
+### Commands
+```servermonitor```
 ```postmailq```
