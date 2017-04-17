@@ -12,9 +12,9 @@ Gem::Specification.new do |gem|
   gem.description = "A collection of server monitoring gems"
   gem.authors     = ["Nedim Hadzimahmutovic"]
   gem.email       = 'h.nedim@gmail.com'
-  gem.files       = ["lib/servermonitor.rb","lib/servermonitor/version.rb","lib/servermonitor/postfimailq.rb"]
+  gem.files       = ["lib/servermonitor.rb","lib/servermonitor/version.rb","lib/servermonitor/postmailq.rb"]
   gem.homepage      = "https://github.com/neidiom/servermonitor"
   gem.require_paths = ["lib"]
-  gem.executables   = %w(servermonitor)
+  gem.executables   = %w(servermonitor postmailq)
   gem.license       = 'MIT'
 end
