@@ -1,7 +1,7 @@
 require "servermonitor/version"
 
 module ServerMonitor
-  def self.hi
-    puts "Hello world, this is ServerMonitor!"
+  def self.welcome
+    puts "Welcome, this is ServerMonitor!"
   end
 end

@@ -2,4 +2,4 @@
 
 require 'servermonitor'
 
-ServerMonitor::welcome
+ServerMonitor::PostfixMailq.run
