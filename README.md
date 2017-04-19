@@ -8,7 +8,7 @@ Collection of ruby server monitoring scripts
 * put script in ``/etc/monit/conf.d/chech_mail-queue ``
 
 ```
-check program check_mail-queue path "/home/nedim/.rvm/gems/ruby-2.4.1/bin/postmailq"
+check program CheckMailQueue path "/home/nedim/.rvm/gems/ruby-2.4.1/bin/postmailq"
     if status != 0 then alert
 ```
 
