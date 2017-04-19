@@ -12,7 +12,7 @@ check program check_mail-queue path "/home/nedim/.rvm/gems/ruby-2.4.1/bin/postma
     if status != 0 then alert
 ```
 
-# Howto use manually invoke
+# Howto manually invoke
 
 ### Commands
 
