@@ -26,6 +26,7 @@ Add to your Gemfile
 gem 'servermonitor', git: 'https://github.com/neidiom/servermonitor.git'
 ```
 Run bundler
+
 ```
 bundle install
 ```
