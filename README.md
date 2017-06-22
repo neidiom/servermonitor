@@ -30,9 +30,9 @@ Run bundler
 bundle install
 ```
 
-# Manually build the ServerMonitor gems
+# Manually build the ServerMonitor gem
 ```
 gem build servermonitor.gemspec
 ls *.gem
 gem install servermonitor-0.0.3.4.gem
-``
+```
