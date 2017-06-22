@@ -26,7 +26,13 @@ Add to your Gemfile
 gem 'servermonitor', git: 'https://github.com/neidiom/servermonitor.git'
 ```
 Run bundler
-
 ```
 bundle install
 ```
+
+# Manually build the ServerMonitor gems
+```
+gem build servermonitor.gemspec
+ls *.gem
+gem install servermonitor-0.0.3.4.gem
+``
