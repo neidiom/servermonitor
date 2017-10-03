@@ -21,7 +21,7 @@ module ServerMonitor
 
       queue = "#{self.config.path} | #{self.config.grep} -v 'Mail queue is empty' | #{self.config.grep} -c '^[A-Z0-9]'"
 
-      # Set the no_msg (number of messages) in the queue if not empty
+      # Set the no_msg (number of messages) from queue variable if not equals to 0
       queue == 0 ? no_msg = 0 : no_msg = queue.to_i
 
       # Compare and return 0 for success and 1 for error
@@ -36,7 +36,5 @@ module ServerMonitor
         puts exit 0
       end
     end
-
   end
-
 end
