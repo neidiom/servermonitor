@@ -17,6 +17,10 @@ module ServerMonitor
       @config ||= Configuration.new
     end
 
+    def self.configure
+      yield(config)
+    end
+
     def self.run
 
       queue = "#{self.config.path} | #{self.config.grep} -v 'Mail queue is empty' | #{self.config.grep} -c '^[A-Z0-9]'"
