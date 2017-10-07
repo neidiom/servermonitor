@@ -23,7 +23,7 @@ module ServerMonitor
 
     def self.run
 
-      queue = "#{self.config.path} | #{self.config.grep} -v 'Mail queue is empty' | #{self.config.grep} -c '^[A-Z0-9]'"
+      queue = `#{self.config.path} | #{self.config.grep} -v 'Mail queue is empty' | #{self.config.grep} -c '^[A-Z0-9]'`
 
       # Set the no_msg (number of messages) from queue variable if no_msg does not = 0
       queue == 0 ? no_msg = 0 : no_msg = queue.to_i
