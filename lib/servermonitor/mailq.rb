@@ -5,7 +5,7 @@ module ServerMonitor
 
     def initialize
       @path = "/opt/zimbra/common/sbin/postqueue -p"
-      @grep = "/usr/bin/grep"
+      @grep = "/bin/grep"
       @critical = 50
       @warning = 40
     end
