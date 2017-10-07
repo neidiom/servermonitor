@@ -11,7 +11,7 @@ module ServerMonitor
     end
   end
 
-  class PostfixMailq
+  class Mailq
 
     def self.config
       @config ||= Configuration.new
