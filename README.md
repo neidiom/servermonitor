@@ -34,5 +34,5 @@ bundle install
 ```
 gem build servermonitor.gemspec
 ls *.gem
-gem install servermonitor-0.0.3.4.gem
+gem install servermonitor-*.gem
 ```
