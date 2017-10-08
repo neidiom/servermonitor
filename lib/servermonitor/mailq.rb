@@ -1,7 +1,7 @@
 module ServerMonitor
 
   class Configuration
-    attr_accessor :path, :grep, :critical, :warning
+    attr_accessor :path, :grep, :critical, :warning, :exit_codes
 
     def initialize
       @path = "/opt/zimbra/common/sbin/postqueue -p"
