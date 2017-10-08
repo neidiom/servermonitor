@@ -4,8 +4,9 @@ Collection of ruby server monitoring scripts
 ### Current scripts provided
 * Mailq - check number of messages in the server's mail queue
 
-## Custom configuration exampple
-``
+## Custom configuration example
+
+```ruby
 #!/usr/bin/env ruby -w
 
 require "servermonitor/mailq"
@@ -18,7 +19,7 @@ end
 
 ServerMonitor::Mailq.run
 
-``
+```
 
 ## Enable exit_codes to use with [monit](https://mmonit.com/monit/)
 
