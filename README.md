@@ -1,5 +1,5 @@
 # Ruby Server Monitor
-Collection of ruby server monitoring scripts
+This is a configurable Ruby gem providing a collection of server monitoring scripts.
 
 ### Current scripts provided
 * Mailq - check number of messages in the server's mail queue
@@ -21,7 +21,7 @@ ServerMonitor::Mailq.run
 
 ```
 
-## Enable exit_codes to use with [monit](https://mmonit.com/monit/)
+## Set exit_codes to true in order to use with [monit](https://mmonit.com/monit/)
 
 ### Example monit configuration to check postfix mailqueue
 * find out path of binary with ``which postmailq ``
