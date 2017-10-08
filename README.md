@@ -1,6 +1,25 @@
 # Ruby Server Monitor
 Collection of ruby server monitoring scripts
 
+### Current scripts provided
+* Mailq - check number of messages in the server's mail queue
+
+## Custom configuration exampple
+``
+#!/usr/bin/env ruby -w
+
+require "servermonitor/mailq"
+
+ServerMonitor::Mailq.configure do |config|
+  config.path = "/opt/zimbra/common/sbin/postqueue -p"
+  config.grep = "/usr/bin/grep"
+  config.exit_codes = false
+end
+
+ServerMonitor::Mailq.run
+
+``
+
 ## Enable exit_codes to use with [monit](https://mmonit.com/monit/)
 
 ### Example monit configuration to check postfix mailqueue
