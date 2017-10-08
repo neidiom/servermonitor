@@ -11,6 +11,7 @@ Collection of ruby server monitoring scripts
 check program CheckMailQueue path "/home/nedim/.rvm/gems/ruby-2.4.1/bin/postmailq"
     if status != 0 then alert
 ```
+* replace ``/home/nedim/.rvm/gems/ruby-2.4.1/bin/postmailq`` with output you got from ``which postmailq ``
 
 # Howto manually invoke
 
