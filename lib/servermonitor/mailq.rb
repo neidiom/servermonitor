@@ -8,6 +8,7 @@ module ServerMonitor
       @grep = "/bin/grep"
       @critical = 50
       @warning = 40
+      @exit_codes = true
     end
   end
 
@@ -31,13 +32,13 @@ module ServerMonitor
       # Compare and return 0 for success and 1 for error
       if no_msg >= self.config.critical.to_i
         puts "#{no_msg} messages in the postfix mail queue"
-        puts exit 1
+        puts exit 1 unless self.config.exit_codes == false
       elsif no_msg >= self.config.warning.to_i
         puts "#{no_msg} messages in the postfix mail queue"
-        puts exit 1
+        puts exit 1 unless self.config.exit_codes == false
       else
         puts "#{no_msg} messages in the postfix mail queue"
-        puts exit 0
+        puts exit 0 unless self.config.exit_codes == false
       end
     end
   end
