@@ -1,7 +1,7 @@
 # Ruby Server Monitor
 Collection of ruby server monitoring scripts
 
-## Intended to use with [monit](https://mmonit.com/monit/)
+## Enable exit_codes to use with [monit](https://mmonit.com/monit/)
 
 ### Example monit configuration to check postfix mailqueue
 * find out path of binary with ``which postmailq ``
