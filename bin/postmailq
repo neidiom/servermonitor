@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
 
-require 'servermonitor/mailq.rb'
+require 'servermonitor/mailq'
 
 ServerMonitor::Mailq.run

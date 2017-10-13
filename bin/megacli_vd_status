@@ -1,0 +1,5 @@
+#!/usr/bin/env ruby
+
+require 'servermonitor/megacli_vd_status'
+
+ServerMonitor::MegaCliVDStatus.run
