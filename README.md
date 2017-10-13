@@ -3,8 +3,11 @@ This is a configurable Ruby gem providing a collection of server monitoring scri
 
 ### Current scripts provided
 * Mailq - check number of messages in the server's mail queue
+* MegaCliVDStatus - check the status of LSI RAID Controller Virtual Drive status
 
 ## Custom configuration example
+
+### Configure Mailq script
 
 ```ruby
 #!/usr/bin/env ruby -w
@@ -18,7 +21,22 @@ ServerMonitor::Mailq.configure do |config|
 end
 
 ServerMonitor::Mailq.run
+```
 
+### Configure MegaCliVDStatus script
+
+```ruby
+#!/usr/bin/env ruby -w
+
+require "servermonitor/megacli_vd_status"
+
+ServerMonitor::MegaCliVDStatus.configure do |config|
+  config.megacli = "/usr/sbin/megacli"
+  config.grep = "/usr/bin/grep"
+  config.exit_codes = false
+end
+
+ServerMonitor::MegaCliVDStatus.run
 ```
 
 ## Set exit_codes to true in order to use with [monit](https://mmonit.com/monit/)
