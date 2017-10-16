@@ -83,9 +83,11 @@ check program CheckMailQueue path "/home/nedim/.rvm/gems/ruby-2.4.2/bin/postmail
 ```postmailq```
 
 ## Install with Bundler
+
 Add to your Gemfile
 ```
 gem 'servermonitor', git: 'https://github.com/neidiom/servermonitor.git'
+
 ```
 Run bundler
 ```
