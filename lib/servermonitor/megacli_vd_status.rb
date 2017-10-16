@@ -54,7 +54,7 @@ module ServerMonitor
         puts exit 1 unless self.config.exit_codes == false
       end
 
-      unless self.config.email_to.empty?
+      unless self.config.email_to == nil
         email = ServerMonitor::EMail.new(self.config.email_from, self.config.email_to, self.config.smtp_address, self.config.smtp_port, self.config.smtp_username, self.config.smtp_password) unless self.config.email_to == nil
         email.deliver
       end
