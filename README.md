@@ -7,7 +7,7 @@ This is a configurable Ruby gem providing a collection of server monitoring scri
 
 ## Custom configuration example
 
-### Configure Mailq script
+### Configure MailQ script
 
 ```ruby
 #!/usr/bin/env ruby -w
@@ -38,6 +38,27 @@ end
 
 ServerMonitor::MegaCliVDStatus.run
 ```
+#### Send email
+
+```ruby
+#!/usr/bin/env ruby -w
+
+require "servermonitor/megacli_vd_status"
+
+ServerMonitor::MegaCliVDStatus.configure do |config|
+  config.megacli = "/usr/sbin/megacli"
+  config.grep = "/usr/bin/grep"
+  config.exit_codes = false
+  config.email_to       = "example@example.to"
+  config.email_from     = "example@example.from"
+  config.smtp_address  = "server"
+  config.smtp_port     = "25"
+  config.smtp_username = "username"
+  config.smtp_password = "password"
+end
+
+ServerMonitor::MegaCliVDStatus.run
+```
 
 ## Set exit_codes to true in order to use with [monit](https://mmonit.com/monit/)
 
@@ -46,7 +67,7 @@ ServerMonitor::MegaCliVDStatus.run
 * put script in ``/etc/monit/conf.d/chech_mail-queue ``
 
 ```
-check program CheckMailQueue path "/home/nedim/.rvm/gems/ruby-2.4.1/bin/postmailq"
+check program CheckMailQueue path "/home/nedim/.rvm/gems/ruby-2.4.2/bin/postmailq"
     if status != 0 then alert
 ```
 * replace ``/home/nedim/.rvm/gems/ruby-2.4.1/bin/postmailq`` with output you got from ``which postmailq ``
