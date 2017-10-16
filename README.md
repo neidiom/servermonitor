@@ -25,6 +25,8 @@ ServerMonitor::Mailq.run
 
 ### Configure MegaCliVDStatus script
 
+#### Output VD status to STDOUT
+
 ```ruby
 #!/usr/bin/env ruby -w
 
@@ -38,7 +40,7 @@ end
 
 ServerMonitor::MegaCliVDStatus.run
 ```
-#### Send email
+#### Send VD status to email
 
 ```ruby
 #!/usr/bin/env ruby -w
