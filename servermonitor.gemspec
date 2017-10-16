@@ -1,6 +1,5 @@
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-
 require "servermonitor/version"
 
 Gem::Specification.new do |gem|
@@ -11,9 +10,13 @@ Gem::Specification.new do |gem|
   gem.description = "A collection of server monitoring ruby scripts packaged in a gem"
   gem.authors     = ["Nedim Hadzimahmutovic"]
   gem.email       = 'h.nedim@gmail.com'
-  gem.files       = ["lib/servermonitor.rb","lib/servermonitor/version.rb","lib/servermonitor/mailq.rb","lib/servermonitor/megacli_vd_status.rb"]
-  gem.homepage      = "https://github.com/neidiom/servermonitor"
+  gem.homepage    = "https://github.com/neidiom/servermonitor"
+
+  gem.files         = ["lib/servermonitor.rb","lib/servermonitor/version.rb","lib/servermonitor/mailq.rb","lib/servermonitor/megacli_vd_status.rb"]
   gem.require_paths = ["lib"]
   gem.executables   = %w(servermonitor postmailq)
+
   gem.license       = 'MIT'
+
+  gem.add_dependency "mail", ">= 2.6.6
 end
