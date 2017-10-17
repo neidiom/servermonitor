@@ -19,4 +19,6 @@ Gem::Specification.new do |gem|
   gem.license       = 'MIT'
 
   gem.add_dependency "mail", ">= 2.6.6
+
+  gem.add_development_dependency "rspec"
 end

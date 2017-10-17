@@ -1,18 +1,18 @@
-require "servermonitor/mail"
+require 'servermonitor/mail'
 
 module ServerMonitor
 
-  class Configuration
+  class VDConfiguration
     attr_accessor :megacli, :grep, :exit_codes, :email_from, :email_to, :smtp_address, :smtp_port, :smtp_username, :smtp_password
 
     def initialize
-      @megacli = "/usr/sbin/megacli"
-      @grep = "/bin/grep"
-      @exit_codes = false
-      @email_from = nil
-      @email_to = nil
-      @smtp_address = nil
-      @smtp_port = nil
+      @megacli       = "/usr/sbin/megacli"
+      @grep          = "/bin/grep"
+      @exit_codes    = false
+      @email_from    = nil
+      @email_to      = nil
+      @smtp_address  = nil
+      @smtp_port     = nil
       @smtp_username = nil
       @smtp_password = nil
     end
@@ -20,7 +20,7 @@ module ServerMonitor
 
   class MegaCliVDStatus
     def self.config
-      @config ||= Configuration.new
+      @config ||= VDConfiguration.new
     end
 
     def self.configure
@@ -55,10 +55,10 @@ module ServerMonitor
       end
 
       if self.config.email_to != nil
-        time = Time.now.strftime("%d.%m.%Y %H:%M")
+        time    = Time.now.strftime("%d.%m.%Y %H:%M")
         subject = "Daily RAID check STARTED on #{fhostname} at #{time}. RAID STATE: #{vd_status}."
-        body = "daily RAID check: #{vd_status}"
-        email = ServerMonitor::EMail.new(self.config.email_from, self.config.email_to, self.config.smtp_address, self.config.smtp_port, self.config.smtp_username, self.config.smtp_password, subject, body) unless self.config.email_to == nil
+        body    = "daily RAID check: #{vd_status}"
+        email   = ServerMonitor::EMail.new(self.config.email_from, self.config.email_to, self.config.smtp_address, self.config.smtp_port, self.config.smtp_username, self.config.smtp_password, subject, body)
         email.deliver
       end
     end

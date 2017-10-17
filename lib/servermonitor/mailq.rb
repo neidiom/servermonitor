@@ -1,13 +1,13 @@
 module ServerMonitor
 
-  class Configuration
+  class MailqConfiguration
     attr_accessor :path, :grep, :critical, :warning, :exit_codes
 
     def initialize
-      @path = "/opt/zimbra/common/sbin/postqueue -p"
-      @grep = "/bin/grep"
-      @critical = 50
-      @warning = 40
+      @path       = "/opt/zimbra/common/sbin/postqueue -p"
+      @grep       = "/bin/grep"
+      @critical   = 50
+      @warning    = 40
       @exit_codes = true
     end
   end
@@ -15,7 +15,7 @@ module ServerMonitor
   class Mailq
 
     def self.config
-      @config ||= Configuration.new
+      @config ||= MailqConfiguration.new
     end
 
     def self.configure

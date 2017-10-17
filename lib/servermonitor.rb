@@ -1,7 +1,7 @@
-require "servermonitor/version"
+require 'servermonitor/version'
 
 module ServerMonitor
   def self.welcome
-    puts "Welcome, this is ServerMonitor!"
+    p "Welcome, this is ServerMonitor!"
   end
 end
