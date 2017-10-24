@@ -62,6 +62,46 @@ end
 ServerMonitor::MegaCliVDStatus.run
 ```
 
+### Configure MegaCliDiskSMARTStatus script
+
+#### Output disk S.M.A.R.T alerts to STDOUT
+
+```ruby
+#!/usr/bin/env ruby -w
+
+require "servermonitor/megacli_disk_smart_status.rb"
+
+ServerMonitor::MegaCliDiskSMARTStatus.configure do |config|
+  config.megacli        = "/usr/sbin/megacli"
+  config.grep           = "/usr/bin/grep"
+  config.exit_codes     = false
+end
+
+ServerMonitor::MegaCliDiskSMARTStatus.run
+```
+#### Send disk S.M.A.R.T alerts to email
+
+```ruby
+#!/usr/bin/env ruby -w
+
+require "servermonitor/megacli_disk_smart_status.rb"
+
+ServerMonitor::MegaCliDiskSMARTStatus.configure do |config|
+  config.megacli        = "/usr/sbin/megacli"
+  config.grep           = "/usr/bin/grep"
+  config.exit_codes     = false
+  config.email_to       = "example@example.to"
+  config.email_from     = "example@example.from"
+  config.smtp_address   = "server"
+  config.smtp_port      = "25"
+  config.smtp_username  = "username"
+  config.smtp_password  = "password"
+end
+
+ServerMonitor::MegaCliDiskSMARTStatus.run
+```
+
+
 ## Set exit_codes to true in order to use with [monit](https://mmonit.com/monit/)
 
 ### Example monit configuration to check postfix mailqueue
