@@ -47,17 +47,17 @@ module ServerMonitor
 
       # Display VD Status
       if vd_status == "Optimal"
-        puts "Virtual drive status is " + vd_status + " on hostname " + fhostname
+        puts "Virtual drive status is " + vd_status.to_s + " on hostname " + fhostname
         puts exit 0 unless self.config.exit_codes == false
       else
-        puts "Virtual drive status is " + vd_status + " on hostname " + fhostname
+        puts "Virtual drive status is " + vd_status.to_s + " on hostname " + fhostname
         puts exit 1 unless self.config.exit_codes == false
       end
 
       if self.config.email_to != nil
         time    = Time.now.strftime("%d.%m.%Y %H:%M")
         subject = "Daily RAID check STARTED on #{fhostname} at #{time}. RAID STATE: #{vd_status}."
-        body    = "daily RAID check: #{vd_status}"
+        body    = "Daily RAID check: #{vd_status}"
         email   = ServerMonitor::EMail.new(self.config.email_from, self.config.email_to, self.config.smtp_address, self.config.smtp_port, self.config.smtp_username, self.config.smtp_password, subject, body)
         email.deliver
       end
