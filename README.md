@@ -70,7 +70,7 @@ ServerMonitor::MegaCliVDStatus.run
 ```ruby
 #!/usr/bin/env ruby -w
 
-require "servermonitor/megacli_disk_smart_status.rb"
+require "servermonitor/megacli_disk_smart_status"
 
 ServerMonitor::MegaCliDiskSMARTStatus.configure do |config|
   config.megacli        = "/usr/sbin/megacli"
@@ -85,7 +85,7 @@ ServerMonitor::MegaCliDiskSMARTStatus.run
 ```ruby
 #!/usr/bin/env ruby -w
 
-require "servermonitor/megacli_disk_smart_status.rb"
+require "servermonitor/megacli_disk_smart_status"
 
 ServerMonitor::MegaCliDiskSMARTStatus.configure do |config|
   config.megacli        = "/usr/sbin/megacli"
