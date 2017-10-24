@@ -6,7 +6,7 @@ This is a configurable Ruby gem providing a collection of server monitoring scri
 * MegaCliVDStatus - check the status of LSI RAID Controller Virtual Drive
 * MegaCliDiskSMARTStatus - check if disk returns a S.M.A.R.T alert
 
-## Custom configuration example
+## Custom configuration examples
 
 ### Configure MailQ script
 
@@ -100,6 +100,22 @@ ServerMonitor::MegaCliDiskSMARTStatus.configure do |config|
 end
 
 ServerMonitor::MegaCliDiskSMARTStatus.run
+```
+
+### RVM and Shebang
+
+```ruby
+#!/usr/bin/env rvm-auto-ruby
+
+require "servermonitor/mailq"
+
+ServerMonitor::Mailq.configure do |config|
+  config.path       = "/opt/zimbra/common/sbin/postqueue -p"
+  config.grep       = "/usr/bin/grep"
+  config.exit_codes = false
+end
+
+ServerMonitor::Mailq.run
 ```
 
 
