@@ -103,6 +103,7 @@ ServerMonitor::MegaCliDiskSMARTStatus.run
 ```
 
 
+# Use with external monitoring systems
 ## Set exit_codes to true in order to use with [monit](https://mmonit.com/monit/)
 
 ### Example monit configuration to check postfix mailqueue
