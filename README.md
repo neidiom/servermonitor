@@ -17,7 +17,7 @@ require "servermonitor/mailq"
 
 ServerMonitor::Mailq.configure do |config|
   config.path       = "/opt/zimbra/common/sbin/postqueue -p"
-  config.grep       = "/usr/bin/grep"
+  config.grep       = "/bin/grep"
   config.exit_codes = false
 end
 
@@ -35,7 +35,7 @@ require "servermonitor/megacli_vd_status"
 
 ServerMonitor::MegaCliVDStatus.configure do |config|
   config.megacli    = "/usr/sbin/megacli"
-  config.grep       = "/usr/bin/grep"
+  config.grep       = "/bin/grep"
   config.exit_codes = false
 end
 
@@ -50,7 +50,7 @@ require "servermonitor/megacli_vd_status"
 
 ServerMonitor::MegaCliVDStatus.configure do |config|
   config.megacli        = "/usr/sbin/megacli"
-  config.grep           = "/usr/bin/grep"
+  config.grep           = "/bin/grep"
   config.exit_codes     = false
   config.email_to       = "example@example.to"
   config.email_from     = "example@example.from"
@@ -74,7 +74,7 @@ require "servermonitor/megacli_disk_smart_status"
 
 ServerMonitor::MegaCliDiskSMARTStatus.configure do |config|
   config.megacli        = "/usr/sbin/megacli"
-  config.grep           = "/usr/bin/grep"
+  config.grep           = "/bin/grep"
   config.exit_codes     = false
 end
 
@@ -89,7 +89,7 @@ require "servermonitor/megacli_disk_smart_status"
 
 ServerMonitor::MegaCliDiskSMARTStatus.configure do |config|
   config.megacli        = "/usr/sbin/megacli"
-  config.grep           = "/usr/bin/grep"
+  config.grep           = "/bin/grep"
   config.exit_codes     = false
   config.email_to       = "example@example.to"
   config.email_from     = "example@example.from"
@@ -111,7 +111,7 @@ require "servermonitor/mailq"
 
 ServerMonitor::Mailq.configure do |config|
   config.path       = "/opt/zimbra/common/sbin/postqueue -p"
-  config.grep       = "/usr/bin/grep"
+  config.grep       = "/bin/grep"
   config.exit_codes = false
 end
 
