@@ -12,13 +12,13 @@ Gem::Specification.new do |gem|
   gem.email       = 'h.nedim@gmail.com'
   gem.homepage    = "https://github.com/neidiom/servermonitor"
 
-  gem.files         = ["lib/servermonitor.rb","lib/servermonitor/version.rb","lib/servermonitor/mailq.rb","lib/servermonitor/megacli_vd_status.rb"]
+  gem.files         = ["lib/servermonitor.rb","lib/servermonitor/version.rb","lib/servermonitor/mailq.rb","lib/servermonitor/megacli_vd_status.rb","lib/servermonitor/megacli_disk_smart_status.rb"]
   gem.require_paths = ["lib"]
   gem.executables   = %w(servermonitor postmailq)
 
   gem.license       = 'MIT'
 
-  gem.add_dependency "mail", ">= 2.6.6
+  gem.add_dependency "mail", "~> 2.6"
 
-  gem.add_development_dependency "rspec"
+  gem.add_development_dependency "rspec", "~> 3.6"
 end
