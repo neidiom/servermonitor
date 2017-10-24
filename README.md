@@ -4,6 +4,7 @@ This is a configurable Ruby gem providing a collection of server monitoring scri
 ### Current scripts provided
 * Mailq - check number of messages in the server's mail queue
 * MegaCliVDStatus - check the status of LSI RAID Controller Virtual Drive
+* MegaCliDiskSMARTStatus - check if disk return a S.M.A.R.T alert
 
 ## Custom configuration example
 
