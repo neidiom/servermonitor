@@ -5,7 +5,7 @@ require "servermonitor/version"
 Gem::Specification.new do |gem|
   gem.name        = 'servermonitor'
   gem.version     = ServerMonitor::VERSION
-  gem.date        = '2017-04-17'
+  gem.date        = '2017-10-25'
   gem.summary     = "Server Monitor"
   gem.description = "A collection of server monitoring ruby scripts packaged in a gem"
   gem.authors     = ["Nedim Hadzimahmutovic"]
