@@ -32,7 +32,7 @@ module ServerMonitor
       fhostname = `hostname -f`
 
       # Get the status for each disk from megacli binary and grep for "Drive has flagged a S.M.A.R.T alert" keyword
-      raid_status = `#{self.config.megacli} -LDInfo -Lall -aALL | #{self.config.grep} "Drive has flagged a S.M.A.R.T alert"`
+      raid_status = `#{self.config.megacli} -PDList -aALL | #{self.config.grep} "Drive has flagged a S.M.A.R.T alert"`
 
       # Define eympty array
       in_in = []
