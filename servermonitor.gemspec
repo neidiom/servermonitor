@@ -17,7 +17,8 @@ Gem::Specification.new do |gem|
   gem.executables   = %w(servermonitor postmailq)
 
   gem.license       = 'MIT'
-
+  
+  gem.required_ruby_version = ">= 2.0"
   gem.add_dependency "mail", "~> 2.6"
 
   gem.add_development_dependency "rspec", "~> 3.6"
